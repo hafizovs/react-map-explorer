@@ -13,13 +13,13 @@ export function PlaceCard({ place, selected, onSelect }: PlaceCardProps) {
       type="button"
       onClick={onSelect}
       className={cn(
-        'w-full rounded-lg border p-3 text-left transition',
+        'w-full min-w-0 rounded-lg border p-3 text-left transition',
         selected ? 'border-blue-500 bg-blue-50' : 'border-slate-200 bg-white hover:border-slate-300',
       )}
     >
-      <p className="font-medium text-slate-900">{place.name}</p>
+      <p className="break-words font-medium text-slate-900">{place.name}</p>
       <p className="text-xs uppercase tracking-wide text-slate-500">{place.category}</p>
-      <p className="mt-1 text-sm text-slate-600">{place.description}</p>
+      <p className="mt-1 break-words text-sm text-slate-600">{place.description}</p>
     </button>
   )
 }
