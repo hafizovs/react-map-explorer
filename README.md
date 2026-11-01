@@ -25,6 +25,10 @@ Searchable place list with category filters and a lightweight map mock. TanStack
 
 Searchable place list with category filters and a lightweight map mock — TanStack Query, client-side clustering.
 
+## Responsive layout
+
+Full adaptive layout for phone (~375px) and tablet (~768px): readable typography and spacing, no page-level horizontal scroll, and touch-friendly controls. The desktop visual language is preserved.
+
 ## Scripts
 
 ```bash
