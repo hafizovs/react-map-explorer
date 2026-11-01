@@ -16,18 +16,20 @@ export function ExplorerToolbar({
   onCategoryChange,
 }: ExplorerToolbarProps) {
   return (
-    <div className="flex flex-wrap items-center gap-3">
+    <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
       <input
         type="search"
         placeholder="Search places…"
         value={query}
         onChange={(e) => onQueryChange(e.target.value)}
-        className="min-w-[200px] flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm"
+        aria-label="Search places"
+        className="min-w-0 w-full rounded-md border border-slate-300 px-3 py-2 text-sm sm:min-w-[12rem] sm:flex-1"
       />
       <select
         value={category}
         onChange={(e) => onCategoryChange(e.target.value as PlaceCategory | 'all')}
-        className="rounded-md border border-slate-300 px-3 py-2 text-sm capitalize"
+        aria-label="Filter by category"
+        className="w-full min-w-0 rounded-md border border-slate-300 px-3 py-2 text-sm capitalize sm:w-auto"
       >
         {categories.map((cat) => (
           <option key={cat} value={cat} className="capitalize">

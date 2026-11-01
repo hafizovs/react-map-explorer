@@ -24,9 +24,9 @@ export function ExplorerPage() {
   )
 
   return (
-    <div className="mx-auto flex min-h-svh max-w-6xl flex-col gap-4 p-4">
-      <header>
-        <h1 className="text-2xl font-semibold text-slate-900">Map explorer</h1>
+    <div className="mx-auto flex min-h-svh w-full min-w-0 max-w-6xl flex-col gap-3 p-3 sm:gap-4 sm:p-4">
+      <header className="min-w-0">
+        <h1 className="text-xl font-semibold text-slate-900 sm:text-2xl">Map explorer</h1>
         <p className="text-sm text-slate-600">Search, filter, and inspect places on a mock map.</p>
       </header>
 
@@ -44,9 +44,9 @@ export function ExplorerPage() {
         </button>
       )}
 
-      <div className="flex flex-col gap-4 lg:flex-row">
+      <div className="flex min-w-0 flex-col gap-3 sm:gap-4 lg:flex-row lg:items-start">
         <PlaceMap places={visible} />
-        <ul className="flex w-full flex-col gap-2 lg:w-80">
+        <ul className="flex min-h-0 w-full min-w-0 flex-col gap-2 lg:w-80 lg:shrink-0 max-lg:max-h-[min(42svh,28rem)] max-lg:overflow-y-auto max-lg:overscroll-y-contain lg:max-h-none lg:overflow-visible">
           {visible.map((place) => (
             <li key={place.id}>
               <PlaceCard
